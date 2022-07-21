@@ -22,7 +22,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ezs-LT-3nM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="267" y="-746"/>
+            <point key="canvasLocation" x="267" y="-676"/>
         </scene>
         <!--Mobile Library Collection View Controller-->
         <scene sceneID="vyX-MW-ea0">
@@ -136,6 +136,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SYV-Cf-JUU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1065" y="23"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="jPa-aC-Nsd">
+            <objects>
+                <viewController storyboardIdentifier="WebViewController" id="iPH-vs-G6b" customClass="WebViewController" customModule="MobileLibrary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XfH-ew-xKP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="1FN-nR-KLo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TgJ-3k-f0U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1871" y="23"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5a5-pJ-Kod">
