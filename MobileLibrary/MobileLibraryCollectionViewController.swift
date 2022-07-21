@@ -14,10 +14,12 @@ class MobileLibraryCollectionViewController: UICollectionViewController {
     let bookData = BookInfo()
     
     
+    // MARK: - Init
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCells()
+        configureNavi()
     }
     
     
@@ -37,6 +39,22 @@ class MobileLibraryCollectionViewController: UICollectionViewController {
         collectionView.collectionViewLayout = layout
     }
     
+    func configureNavi() {
+        navigationItem.title = "모바일 도서관"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"), style: .plain, target: self, action: #selector(magnifyButtonTapped))
+    }
+    
+    @objc func magnifyButtonTapped() {
+        
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        guard let vc = sb.instantiateViewController(withIdentifier: LookUpViewController.identifier) as? LookUpViewController else { return }
+
+        self.present(vc, animated: true)
+    }
+
+    
+    // MARK: - Collection Views Functions
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return bookData.book.count
     }
@@ -51,5 +69,13 @@ class MobileLibraryCollectionViewController: UICollectionViewController {
         return cell
     }
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        
+        guard let vc = sb.instantiateViewController(withIdentifier: DetailViewController.identifier) as? DetailViewController else { return }
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 
 }
