@@ -25,12 +25,11 @@ class MobileLibraryCollectionViewCell: UICollectionViewCell {
         // 책 이미지를 블러처리해서 배경으로 만들어주기
         backImageView.backgroundColor = .clear
         backImageView.image = UIImage(named: data.title.components(separatedBy: [" ", ","]).joined())
-        backImageView.contentMode = .scaleAspectFill
+        backImageView.contentMode = .scaleAspectFit
         backImageView.clipsToBounds = true
         backImageView.layer.cornerRadius = 20
         let blurEffect = UIBlurEffect(style: .light)
         let blurView = UIVisualEffectView(effect: blurEffect)
-        blurView.translatesAutoresizingMaskIntoConstraints = false
         backImageView.insertSubview(blurView, at: 0)
         
         blurView.anchor(top: backImageView.topAnchor, left: backImageView.leftAnchor, bottom: backImageView.bottomAnchor, right: backImageView.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)

@@ -18,11 +18,18 @@ class LookUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        configureNavi()
     }
     
 
     // MARK: - Helper Functions
     
-
+    func configureNavi() {
+        navigationItem.title = "검색"
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(closeButtonTapped))
+    }
+    
+    @objc func closeButtonTapped() {
+        self.dismiss(animated: true)
+    }
 }

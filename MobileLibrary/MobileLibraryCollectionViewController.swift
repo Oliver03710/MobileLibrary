@@ -48,8 +48,9 @@ class MobileLibraryCollectionViewController: UICollectionViewController {
         
         let sb = UIStoryboard(name: "Main", bundle: nil)
         guard let vc = sb.instantiateViewController(withIdentifier: LookUpViewController.identifier) as? LookUpViewController else { return }
-
-        self.present(vc, animated: true)
+        let nav = UINavigationController(rootViewController: vc)
+        nav.modalPresentationStyle = .fullScreen
+        self.present(nav, animated: true)
     }
 
     
